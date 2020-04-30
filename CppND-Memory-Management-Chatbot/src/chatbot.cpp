@@ -35,6 +35,7 @@ ChatBot::ChatBot(std::string filename)
 
 ChatBot::~ChatBot()
 {
+    std::cout << "ChatBot Destructor" << std::endl;
     // deallocate heap memory
     if(_image != NULL) // Attention: wxWidgets used NULL and not nullptr
     {
@@ -47,7 +48,7 @@ ChatBot::~ChatBot()
 ////
 ChatBot::ChatBot(const ChatBot& source)
 {
-    std::cout << "copy constructor" << std::endl;
+    std::cout << "ChatBot copy constructor" << std::endl;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
     _chatLogic->SetChatbotHandle(this);
@@ -72,7 +73,7 @@ ChatBot &ChatBot::operator=(const ChatBot &source)
 
 ChatBot::ChatBot(ChatBot &&source)
 {
-    std::cout<< "Move constructor" << std::endl;
+    std::cout<< "ChatBot Move constructor" << std::endl;
     _image = source._image; 
     _chatLogic = source._chatLogic;
     _chatLogic->SetChatbotHandle(this);
@@ -86,7 +87,7 @@ ChatBot::ChatBot(ChatBot &&source)
 
 ChatBot &ChatBot::operator=(ChatBot &&source)
 {
-    std::cout << "Move assignment operator" << std::endl;
+    std::cout << "ChatBot Move assignment operator" << std::endl;
     if (this == &source)
         return *this;
     delete _image;
