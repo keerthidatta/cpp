@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/datta/simulation_ws/devel/include/**",
+                "/home/datta/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/ackermann_steering_controller/include/**",
+                "/home/datta/catkin_ws/src/srv_tools/bag_tools/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/diff_drive_controller/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/effort_controllers/include/**",
+                "/home/datta/simulation_ws/src/fake_global_planner/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/force_torque_sensor_controller/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/forward_command_controller/include/**",
+                "/home/datta/simulation_ws/src/robot_platform/four_wheel_steering_controller/include/**",
+                "/home/datta/simulation_ws/src/gazebo_plugins/gazebo_ros_2Dmap_plugin/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/gripper_action_controller/include/**",
+                "/home/datta/catkin_ws/src/husky/husky_base/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/imu_sensor_controller/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/joint_state_controller/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/joint_trajectory_controller/include/**",
+                "/home/datta/catkin_ws/src/mono_vision/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/position_controllers/include/**",
+                "/home/datta/catkin_ws/src/pylon-ros-camera/pylon_camera/include/**",
+                "/home/datta/catkin_ws/src/robot_pose_ekf/include/**",
+                "/home/datta/catkin_ws/src/ros_controllers/velocity_controllers/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}

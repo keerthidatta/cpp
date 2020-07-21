@@ -39,26 +39,19 @@ Processor& System::Cpu() { return cpu_; }
 vector<Process>& System::Processes() 
 {
     std::vector<int> pids{LinuxParser::Pids()};
-    std::set<int> pid_set;
-    for(auto& process: processes_)
-    {
-        pid_set.insert(process.Pid());
-    }
+    processes_.clear();
     for (int pid: pids)
     {
         Process process;
-        //Check if pid already exists in processes:
-        if (pid_set.find(pid) == pid_set.end())
-        {
-            process.setpid(pid);
-            process.setuser(LinuxParser::User(pid));
-            process.setuptime(LinuxParser::UpTime(pid));
-            process.setcommand(LinuxParser::Command(pid));
-            process.setram(LinuxParser::Ram(pid));
-            std::vector<std::string> cpu_data = LinuxParser::CpuProcessUtilization(pid);
-            process.setCpu(ComputeCpu(cpu_data, UpTime()));
-            processes_.emplace_back(process);
-        }
+        process.setpid(pid);
+        process.setuser(LinuxParser::User(pid));
+        process.setuptime(LinuxParser::UpTime(pid));
+        process.setcommand(LinuxParser::Command(pid));
+        process.setram(LinuxParser::Ram(pid));
+        std::vector<std::string> cpu_data = LinuxParser::CpuProcessUtilization(pid);
+        process.setCpu(ComputeCpu(cpu_data, UpTime()));
+        processes_.emplace_back(process);
+
     }
     std::sort(processes_.begin(), processes_.end());
     return processes_; 
